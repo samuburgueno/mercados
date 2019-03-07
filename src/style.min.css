@@ -1,0 +1,115 @@
+.widget-currency {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    grid-gap: 24px 16px
+}
+
+.widget-currency-col {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff
+}
+
+.widget-currency-col .href {
+    display: flow-root;
+    color: #000;
+    text-decoration: none
+}
+
+.widget-currency-col[data-visibility=false] {
+    display: none!important
+}
+
+.widget-currency-col[data-position=position-1] {
+    grid-column: 1;
+    grid-row: 1
+}
+
+.widget-currency-col[data-position=position-2] {
+    grid-column: 2;
+    grid-row: 1
+}
+
+.widget-currency-col[data-position=position-3] {
+    grid-column: 1;
+    grid-row: 2
+}
+
+.widget-currency-col[data-position=position-4] {
+    grid-column: 2;
+    grid-row: 2
+}
+
+.widget-currency-col[data-position=position-none] {
+    display: none
+}
+
+.widget-currency-col h4 {
+    text-transform: uppercase;
+    margin: 0 0 6px 0
+}
+
+.widget-currency-col .href:hover h4 {
+    text-decoration: underline
+}
+
+.widget-currency-col span {
+    font-size: 14px;
+    text-transform: uppercase
+}
+
+.widget-currency-col label {
+    color: #0070c9;
+    font-size: 14px;
+    padding-left: 8px
+}
+
+/*.widget-currency-col label::after {
+    content: "%"
+}*/
+
+.widget-currency-col label.true {
+    color: #7dc449
+}
+
+.widget-currency-col label.true::before {
+    content: "+"
+}
+
+.widget-currency-col label.false {
+    color: #d32f2f
+}
+
+@media screen and (min-width:768px) {
+    .widget-currency-chain>.chain-content {
+        padding: 15px 0!important;
+        max-height: 72px;
+        overflow: hidden
+    }
+    .widget-currency {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 16px;
+        padding: 8px 0
+    }
+    .widget-currency-col {
+        margin: auto
+    }
+    .widget-currency-col[data-position=position-1] {
+        grid-column: 1;
+        grid-row: 1
+    }
+    .widget-currency-col[data-position=position-2] {
+        grid-column: 2;
+        grid-row: 1
+    }
+    .widget-currency-col[data-position=position-3] {
+        grid-column: 3;
+        grid-row: 1
+    }
+    .widget-currency-col[data-position=position-4] {
+        grid-column: 4;
+        grid-row: 1
+    }
+}
